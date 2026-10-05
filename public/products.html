@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Products - ShopZone</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="logo" onclick="location.href='/'">
+        Shop<span>Zone</span>
+    </div>
+
+    <div class="search-box">
+
+        <select id="searchCategory">
+
+            <option value="all">All</option>
+            <option value="electronics">Electronics</option>
+            <option value="fashion">Fashion</option>
+            <option value="home">Home</option>
+            <option value="books">Books</option>
+
+        </select>
+
+        <input
+            id="searchInput"
+            type="text"
+            placeholder="Search products..."
+        >
+
+        <button onclick="searchProducts()">🔍</button>
+
+    </div>
+
+    <div class="header-link">
+        <small>Hello,</small>
+        <strong>Sign in</strong>
+    </div>
+
+    <div class="header-link" onclick="location.href='orders.html'">
+        <small>Returns</small>
+        <strong>& Orders</strong>
+    </div>
+
+    <div class="cart-icon" onclick="location.href='cart.html'">
+        🛒
+        <span id="cartCount">0</span>
+        <b>Cart</b>
+    </div>
+
+</header>
+
+<nav class="nav">
+
+    <span>☰ All</span>
+
+    <a href="/">Home</a>
+    <a href="products.html">Today's Deals</a>
+    <a href="products.html?category=electronics">Electronics</a>
+    <a href="products.html?category=fashion">Fashion</a>
+    <a href="products.html?category=home">Home</a>
+    <a href="products.html?category=books">Books</a>
+
+</nav>
+
+<main class="products-page">
+
+    <aside class="filters">
+
+        <h3>Category</h3>
+
+        <label>
+            <input type="radio" name="category" value="all" checked>
+            All
+        </label>
+
+        <label>
+            <input type="radio" name="category" value="electronics">
+            Electronics
+        </label>
+
+        <label>
+            <input type="radio" name="category" value="fashion">
+            Fashion
+        </label>
+
+        <label>
+            <input type="radio" name="category" value="home">
+            Home
+        </label>
+
+        <label>
+            <input type="radio" name="category" value="books">
+            Books
+        </label>
+
+        <h3>Price</h3>
+
+        <label>
+            <input type="radio" name="price" value="all" checked>
+            All
+        </label>
+
+        <label>
+            <input type="radio" name="price" value="1000">
+            Under ₹1,000
+        </label>
+
+        <label>
+            <input type="radio" name="price" value="5000">
+            Under ₹5,000
+        </label>
+
+        <label>
+            <input type="radio" name="price" value="10000">
+            Under ₹10,000
+        </label>
+
+    </aside>
+
+    <section class="product-results">
+
+        <div class="results-top">
+
+            <h1 id="resultsTitle">All Products</h1>
+
+            <select id="sortProducts">
+
+                <option value="default">
+                    Sort by: Featured
+                </option>
+
+                <option value="low">
+                    Price: Low to High
+                </option>
+
+                <option value="high">
+                    Price: High to Low
+                </option>
+
+                <option value="rating">
+                    Customer Rating
+                </option>
+
+            </select>
+
+        </div>
+
+        <div id="productsContainer" class="product-grid"></div>
+
+    </section>
+
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/products.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout - ShopZone</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="simple-header">
+
+    <div class="logo" onclick="location.href='/'">
+        Shop<span>Zone</span>
+    </div>
+
+    <h2>Secure Checkout 🔒</h2>
+
+</header>
+
+<main class="checkout-page">
+
+    <section class="checkout-form">
+
+        <h1>Checkout</h1>
+
+        <h2>Delivery Address</h2>
+
+        <input
+            id="name"
+            type="text"
+            placeholder="Full Name"
+        >
+
+        <input
+            id="phone"
+            type="tel"
+            placeholder="Mobile Number"
+        >
+
+        <textarea
+            id="address"
+            placeholder="Address">
+        </textarea>
+
+        <div class="two-input">
+
+            <input
+                id="city"
+                type="text"
+                placeholder="City"
+            >
+
+            <input
+                id="pincode"
+                type="text"
+                placeholder="PIN Code"
+            >
+
+        </div>
+
+        <h2>Payment Method</h2>
+
+        <label class="payment-option">
+            <input
+                type="radio"
+                name="payment"
+                value="cod"
+                checked>
+            Cash on Delivery
+        </label>
+
+        <label class="payment-option">
+            <input
+                type="radio"
+                name="payment"
+                value="upi">
+            UPI
+        </label>
+
+        <label class="payment-option">
+            <input
+                type="radio"
+                name="payment"
+                value="card">
+            Credit / Debit Card
+        </label>
+
+        <button
+            class="place-order"
+            onclick="placeOrder()">
+            Place Order
+        </button>
+
+    </section>
+
+    <aside class="checkout-summary">
+
+        <h2>Order Summary</h2>
+
+        <div id="checkoutItems"></div>
+
+        <hr>
+
+        <h2>
+            Total:
+            <span id="checkoutTotal">₹0</span>
+        </h2>
+
+    </aside>
+
+</main>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/checkout.js"></script>
+
+</body>
+</html>
